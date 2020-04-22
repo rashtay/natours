@@ -47,6 +47,7 @@ header {
   Hence, we translate (shifted) the element 50% from the current position towards the back in X and Y axis to place it in the center
   */
   transform: translate(-50%, -50%);
+  text-align: center;
 }
 
 .heading-primary {
@@ -60,6 +61,7 @@ header {
     Reasons are yet unknown
   */
   backface-visibility: hidden;
+  margin-bottom: 60px;
 }
 
 .heading-primary span {
@@ -114,6 +116,82 @@ header {
 
   100% {
     transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* link is a pseudo class which says that the anchor is a link */
+/* visited is a pseudo class which says that the link has been visited */
+.btn:link,
+.btn:visited {
+  position: relative;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px 40px;
+
+  /* inline blocks are treated as text and hence it can be text aligned */
+  display: inline-block;
+  border-radius: 100px;
+  transition: all 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* on clicking, it'll move the button a bit down. Gives a click effect */
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-white {
+  background-color: var(--white);
+  color: var(--gray);
+}
+
+/* Transition is added to initial state */
+.btn::after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s;
+}
+
+.btn-white::after {
+  background-color: var(--white);
+}
+
+/* scales the copy of the button created with ::after and disappears due to opacity  */
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+.btn-animated {
+  animation-name: moveInBtn;
+  animation-timing-function: ease-out;
+  animation-duration: 0.5s;
+  animation-delay: 0.35s;
+  /* Adds the style of 0% to the element */
+  animation-fill-mode: backwards;
+}
+
+@keyframes moveInBtn {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
     opacity: 1;
   }
 }

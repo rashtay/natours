@@ -23,6 +23,7 @@ Dark green: #28b485
   --green-dark: #28b485;
   --green-dark-80: rgba(40, 180, 133, 0.8);
   --white: #fff;
+  --gray: #777;
 }
 
 /* Everything related to the font should either be applied to the body or html */
