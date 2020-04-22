@@ -6,3 +6,31 @@ Medium green: #55c57a
 Dark green: #28b485
 
 */
+
+@import "./header.css";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --gray: #777;
+  --green-light: #7ed56f;
+  --green-light-80: rgba(126, 213, 111, 0.8);
+  --green-medium: #55c57a;
+  --green-dark: #28b485;
+  --green-dark-80: rgba(40, 180, 133, 0.8);
+}
+
+/* Everything related to the font should either be applied to the body or html */
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  /* 1.7 times bigger than the predefined line-height */
+  line-height: 1.7;
+  color: var(--gray);
+  padding: 30px;
+}

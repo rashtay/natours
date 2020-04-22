@@ -1,0 +1,26 @@
+/* Header CSS Style */
+header {
+  /* Instead of setting it 100vh, set it to 95vh so that we just almost stretch to the end */
+  height: 95vh;
+  /* First render the gradient and the image */
+  background-image: linear-gradient(
+      to right bottom,
+      var(--green-light-80),
+      var(--green-dark-80)
+    ),
+    url("../img/hero.jpg");
+  background-size: cover;
+  /* The top remains the same while the bottom gets cropped */
+  background-position: top;
+
+  /* 
+  top left corner x y coordinate is 0 0, 
+  
+  top right corner x coordinate'd be 100% towards right. y didn't change, so 0 
+  
+  bottom right corner x coordinate'd be 100% towards right, y is 200px towards bottom
+
+  bottom left corner x coordinate'd be 0 back to beginning, y is 100% to the bottom
+  */
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+}
