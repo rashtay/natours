@@ -9,10 +9,13 @@ Dark green: #28b485
 
 @import "./header.css";
 
-* {
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  /* Use inheritance rather than applying style via universal selectors */
+  box-sizing: inherit;
 }
 
 :root {
@@ -26,6 +29,14 @@ Dark green: #28b485
   --gray: #777;
 }
 
+html {
+  /* Setting font-size in pixels is a bad practice */
+  /* This will hinder with the settings of people who would like to set their own user stylesheet and set their default font-size */
+  /* Hence, specify in percentage */
+  /* font-size: 10px; */
+  font-size: 62.5%;
+}
+
 /* Everything related to the font should either be applied to the body or html */
 body {
   font-family: "Lato", sans-serif;
@@ -34,5 +45,6 @@ body {
   /* 1.7 times bigger than the predefined line-height */
   line-height: 1.7;
   color: var(--gray);
-  padding: 30px;
+  padding: 3rem;
+  box-sizing: border-box;
 }
