@@ -34,6 +34,7 @@ html {
   /* This will hinder with the settings of people who would like to set their own user stylesheet and set their default font-size */
   /* Hence, specify in percentage */
   /* font-size: 10px; */
+  /* The child lengths (padding, width, margin, etc) and font-sizes should use rem to refer to this value*/
   font-size: 62.5%;
 }
 
