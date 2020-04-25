@@ -1,3 +1,4 @@
+// Click the computed tab to see the computed values
 @import "./abstract/functions";
 @import "./abstract/mixins";
 @import "./abstract/variables";
@@ -8,6 +9,7 @@
 @import "./base/utilities";
 
 @import "./components/button";
+@import "./components/composition";
 
 @import "./layout/header";
 @import "./layout/grid";

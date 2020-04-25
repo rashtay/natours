@@ -1,7 +1,6 @@
 // The trend is to make a grid of max-width of 1140px
 .row {
-  width: $grid-width;
-  background-color: #eee;
+  max-width: $grid-width;
 
   // Let the browser calculate the margins automatically
   margin: 0 auto;
@@ -17,7 +16,6 @@
   // * means select all classes containing col-
   // $ means any classes ending with col-
   [class^="col-"] {
-    background-color: orangered;
     float: left;
 
     &:not(:last-child) {
