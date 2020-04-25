@@ -1,5 +1,5 @@
 /* Header CSS Style */
-header {
+.header {
   /* Instead of setting it 100vh, set it to 95vh so that we just almost stretch to the end */
   height: 95vh;
   position: relative;
@@ -26,15 +26,15 @@ header {
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 }
 
-.logo {
+.header__logo-box {
   margin: 4rem 0 0 4rem;
 }
 
-.logo {
+.header__logo {
   height: 3.5rem;
 }
 
-.text-box {
+.header__text-box {
   position: absolute;
   /* This shifts the element to the left and from top by 50% */
   top: 40%;
@@ -68,7 +68,7 @@ header {
   display: block;
 }
 
-.heading-primary-main {
+.heading-primary--main {
   font-size: 6rem;
   font-weight: 400;
   letter-spacing: 3.5rem;
@@ -78,7 +78,7 @@ header {
   animation-timing-function: ease-out;
 }
 
-.heading-primary-sub {
+.heading-primary--sub {
   font-size: 2rem;
   font-weight: 700;
   letter-spacing: 1.75rem;
@@ -147,7 +147,7 @@ header {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
 
-.btn-white {
+.btn--white {
   background-color: var(--white);
   color: var(--gray);
 }
@@ -166,7 +166,7 @@ header {
   transition: all 0.4s;
 }
 
-.btn-white::after {
+.btn--white::after {
   background-color: var(--white);
 }
 
@@ -176,7 +176,7 @@ header {
   opacity: 0;
 }
 
-.btn-animated {
+.btn--animated {
   animation-name: moveInBtn;
   animation-timing-function: ease-out;
   animation-duration: 0.5s;
