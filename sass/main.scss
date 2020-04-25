@@ -7,7 +7,10 @@ Dark green: #28b485
 
 */
 
-@import "./header.css";
+@import "./variables.scss";
+@import "./header.scss";
+
+// We use extend only for blocks/elements that belong to the same group like button
 
 *,
 *::after,
@@ -16,17 +19,6 @@ Dark green: #28b485
   padding: 0;
   /* Use inheritance rather than applying style via universal selectors */
   box-sizing: inherit;
-}
-
-:root {
-  --gray: #777;
-  --green-light: #7ed56f;
-  --green-light-80: rgba(126, 213, 111, 0.8);
-  --green-medium: #55c57a;
-  --green-dark: #28b485;
-  --green-dark-80: rgba(40, 180, 133, 0.8);
-  --white: #fff;
-  --gray: #777;
 }
 
 html {
@@ -45,7 +37,7 @@ body {
   font-size: 16px;
   /* 1.7 times bigger than the predefined line-height */
   line-height: 1.7;
-  color: var(--gray);
+  color: $color-gray-dark;
   padding: 3rem;
   box-sizing: border-box;
 }
