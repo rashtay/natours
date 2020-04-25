@@ -1,0 +1,46 @@
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  /* 1.7 times bigger than the predefined line-height */
+  line-height: 1.7;
+  color: $color-gray-dark;
+}
+
+.heading-primary {
+  color: $color-white;
+  text-transform: uppercase;
+  text-align: center;
+
+  /* 
+    Though this hides the 'back' side of the transformed element,
+    it also avoids the shaky behavior while animating an element.
+    Reasons are yet unknown
+  */
+  backface-visibility: hidden;
+  margin-bottom: 6rem;
+
+  span {
+    display: block;
+  }
+
+  &--main {
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+  }
+
+  &--sub {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.75rem;
+
+    animation-name: moveInRight;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+  }
+}

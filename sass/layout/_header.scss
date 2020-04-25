@@ -1,0 +1,51 @@
+/* Header CSS Style */
+.header {
+  /* Instead of setting it 100vh, set it to 95vh so that we just almost stretch to the end */
+  height: 95vh;
+  position: relative;
+  /* First render the gradient and the image */
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary-light, 0.8),
+      rgba($color-primary-dark, 0.8)
+    ),
+    url("../img/hero.jpg");
+  background-size: cover;
+  /* The top remains the same while the bottom gets cropped */
+  background-position: top;
+
+  /* 
+  top left corner x y coordinate is 0 0, 
+  
+  top right corner x coordinate'd be 100% towards right. y didn't change, so 0 
+  
+  bottom right corner x coordinate'd be 100% towards right, y is 200px towards bottom
+
+  bottom left corner x coordinate'd be 0 back to beginning, y is 100% to the bottom
+  */
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+  &__logo-box {
+    padding: 4rem 0 0 4rem;
+  }
+
+  &__logo {
+    height: 3.5rem;
+  }
+
+  &__text-box {
+    position: absolute;
+    /* This shifts the element to the left and from top by 50% */
+    top: 40%;
+    left: 50%;
+
+    /* 
+  The left and top will make the element start from the specified position 
+  due to which the element will not actually be placed in the center. The element positioning will start from the center.
+
+  Hence, we translate (shifted) the element 50% from the current position towards the back in X and Y axis to place it in the center
+  */
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+}

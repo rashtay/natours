@@ -1,0 +1,27 @@
+// This is a partial. They always start with an underscore
+// We use extend only for blocks/elements that belong to the same group like button
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  /* Use inheritance rather than applying style via universal selectors */
+  box-sizing: inherit;
+}
+
+html {
+  /* Setting font-size in pixels is a bad practice */
+  /* This will hinder with the settings of people who would like to set their own user stylesheet and set their default font-size */
+  /* Hence, specify in percentage */
+  /* font-size: 10px; */
+  /* The child lengths (padding, width, margin, etc) and font-sizes should use rem to refer to this value*/
+  // This defines what 1rem is
+  font-size: 62.5%;
+}
+
+/* Everything related to the font should either be applied to the body or html */
+body {
+  padding: 3rem;
+  box-sizing: border-box;
+}

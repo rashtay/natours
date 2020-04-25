@@ -1,43 +1,14 @@
-/*
-COLORS:
+@import "./abstract/functions";
+@import "./abstract/mixins";
+@import "./abstract/variables";
 
-Light green: #7ed56f
-Medium green: #55c57a
-Dark green: #28b485
+@import "./base/base";
+@import "./base/animations";
+@import "./base/typography";
+@import "./base/utilities";
 
-*/
+@import "./components/button";
 
-@import "./variables.scss";
-@import "./header.scss";
+@import "./layout/header";
 
-// We use extend only for blocks/elements that belong to the same group like button
-
-*,
-*::after,
-*::before {
-  margin: 0;
-  padding: 0;
-  /* Use inheritance rather than applying style via universal selectors */
-  box-sizing: inherit;
-}
-
-html {
-  /* Setting font-size in pixels is a bad practice */
-  /* This will hinder with the settings of people who would like to set their own user stylesheet and set their default font-size */
-  /* Hence, specify in percentage */
-  /* font-size: 10px; */
-  /* The child lengths (padding, width, margin, etc) and font-sizes should use rem to refer to this value*/
-  font-size: 62.5%;
-}
-
-/* Everything related to the font should either be applied to the body or html */
-body {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  /* 1.7 times bigger than the predefined line-height */
-  line-height: 1.7;
-  color: $color-gray-dark;
-  padding: 3rem;
-  box-sizing: border-box;
-}
+@import "./pages/home";
