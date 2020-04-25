@@ -1,0 +1,8 @@
+@mixin clearFix {
+  &::after {
+    content: "";
+    // Do not allow floating elements on the left or the right side of a specified element
+    clear: both;
+    display: table;
+  }
+}
