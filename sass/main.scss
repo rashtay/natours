@@ -1,4 +1,6 @@
 // Click the computed tab to see the computed values
+// This is a partial. They always start with an underscore
+// We use extend only for blocks/elements that belong to the same group like button
 @import "./abstract/functions";
 @import "./abstract/mixins";
 @import "./abstract/variables";
